@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>RingGuard · Privacy Policy</title>
+<meta name="description" content="RingGuard collects no personal data and makes no network connections of any kind. Everything stays encrypted, on your device." />
+<link rel="canonical" href="https://wandering-spirit-22.github.io/ringguard/privacy.html" />
+<meta property="og:title" content="RingGuard · Privacy Policy" />
+<meta property="og:description" content="RingGuard collects no personal data and makes no network connections of any kind. Everything stays encrypted, on your device." />
+<meta property="og:url" content="https://wandering-spirit-22.github.io/ringguard/privacy.html" />
+<meta property="og:type" content="website" />
+<meta name="theme-color" content="#EDE8DB" />
+<meta name="robots" content="index,follow" />
+
+<link rel="icon" type="image/png" href="assets/icon.png" />
+<link rel="apple-touch-icon" href="assets/icon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="style.css" />
+<style>
+  .legal {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 80px 28px 120px;
+  }
+  .legal .eyebrow { margin-bottom: 14px; }
+  .legal h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(40px, 6vw, 72px);
+    line-height: 1.04;
+    letter-spacing: -0.02em;
+    margin: 0 0 8px;
+  }
+  .legal .updated {
+    color: var(--text-3);
+    font-size: 14px;
+    margin: 0 0 36px;
+  }
+  .legal h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 26px;
+    letter-spacing: -0.01em;
+    margin: 40px 0 10px;
+  }
+  .legal p, .legal li {
+    color: var(--text);
+    font-size: 16.5px;
+    line-height: 1.7;
+  }
+  .legal p { margin: 0 0 14px; }
+  .legal ul { padding-left: 22px; margin: 0 0 14px; }
+  .legal li { margin-bottom: 6px; }
+  .legal a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+  .legal a:hover { color: var(--warm); }
+  .legal .summary {
+    background: var(--card);
+    border: 1px solid var(--divider);
+    border-radius: var(--r-card);
+    padding: 22px 26px;
+    margin: 28px 0 8px;
+    box-shadow: var(--shadow-1);
+  }
+  .legal .summary p { margin: 0; }
+  .legal .summary strong { color: var(--text); }
+  .legal .back {
+    display: inline-flex; align-items: center; gap: 8px;
+    color: var(--text-2);
+    font-size: 14.5px;
+    margin-top: 40px;
+  }
+  .legal .back:hover { color: var(--text); }
+</style>
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="/index.html" aria-label="RingGuard home">
+      <img src="assets/icon.png" alt="" width="32" height="32" />
+      <span>RingGuard</span>
+    </a>
+    <nav class="nav-links">
+      <a href="/index.html#features">Whitelist</a>
+      <a href="/index.html#widget">Smart Rules</a>
+      <a href="/index.html#share">Reviews</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <article class="legal">
+    <p class="eyebrow">RingGuard</p>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Effective date: 20 June 2026 · Last updated: 20 June 2026</p>
+
+    <div class="summary">
+      <p><strong>Short version:</strong> RingGuard collects no personal data, sells nothing, and makes no network connections at all. Your whitelist, your activity log, and your settings stay encrypted on your device, and nowhere else.</p>
+    </div>
+
+    <h2>No data collection</h2>
+    <p>RingGuard ("the app", "we", "our") is an Android utility that lets specific contacts ring through even when your phone is set to silent or vibrate mode. RingGuard does not collect, transmit, sell, or share any personal data with any third party, server, or analytics service. The app has no internet permission and cannot make any network connection whatsoever. All processing happens entirely on your device.</p>
+
+    <h2>What stays on your device</h2>
+    <p>Everything RingGuard needs to work is stored locally, and none of it ever leaves your device.</p>
+    <ul>
+      <li><strong>Whitelisted contact names and phone numbers</strong> — stored in an encrypted on-device database (SQLCipher, backed by the Android Keystore).</li>
+      <li><strong>Call activity log</strong> — a 7-day local log of which numbers were allowed or blocked, used only to show the "Recent Activity" screen in the app, and deleted automatically after 7 days.</li>
+      <li><strong>App preferences</strong> — settings like your repeat-caller window and whether protection is enabled, stored on-device only, in Android DataStore.</li>
+    </ul>
+
+    <h2>Permissions we use, and why</h2>
+    <ul>
+      <li><em>Phone state</em> — detects when a call arrives so the app can decide whether to let it ring.</li>
+      <li><em>Call log</em> — required on Android 10 and above to read the incoming caller's number from the phone-state broadcast.</li>
+      <li><em>Contacts</em> — lets you browse your contact list inside the app to choose who is whitelisted. Contacts are never uploaded anywhere.</li>
+      <li><em>Audio settings</em> — temporarily switches your ringer to normal for a whitelisted caller, then restores your previous mode once the call ends.</li>
+      <li><em>Foreground service</em> — keeps the protection service running in the background with a visible notification.</li>
+      <li><em>Boot completed</em> — restarts the protection service automatically after your device reboots, only if you had it enabled.</li>
+      <li><em>Notifications</em> — shows the foreground notification and in-app alerts on Android 13 and above.</li>
+    </ul>
+
+    <h2>What RingGuard does not do</h2>
+    <ul>
+      <li>Does not record calls or audio</li>
+      <li>Does not read SMS or MMS content</li>
+      <li>Does not access location data</li>
+      <li>Does not use advertising SDKs or analytics libraries</li>
+      <li>Does not connect to the internet in any way</li>
+      <li>Does not share data with any third party</li>
+    </ul>
+
+    <h2>Children's privacy</h2>
+    <p>RingGuard is not directed at children under the age of 13 and does not knowingly collect information from children.</p>
+
+    <h2>Security</h2>
+    <p>The local database is encrypted using SQLCipher with a 256-bit AES key derived from the Android Keystore, which is hardware-backed on supported devices. No plaintext contact data is ever stored in logs or crash reports.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>We may update this policy if RingGuard's functionality changes. The "Last updated" date above reflects the current version.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about this policy? Email <a href="mailto:support.ringguard@gmail.com">support.ringguard@gmail.com</a>.</p>
+    <p class="updated">This policy is also hosted at <a href="https://wandering-spirit-22.github.io/ringguard/" target="_blank" rel="noopener">wandering-spirit-22.github.io/ringguard</a>.</p>
+
+    <a class="back" href="/index.html">← Back to RingGuard</a>
+  </article>
+</main>
+
+<footer class="foot">
+  <div class="foot-inner">
+    <div class="foot-brand">
+      <img src="assets/icon.png" alt="" width="28" height="28" />
+      <span>RingGuard</span>
+    </div>
+    <div class="foot-meta">
+      <span>Built in India.</span>
+      <span class="dot">·</span>
+      <span>© <span id="year">2026</span></span>
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = String(new Date().getFullYear());</script>
+</body>
+</html>
