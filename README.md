@@ -78,4 +78,4 @@ Questions or feedback: [support.ringguard@gmail.com](mailto:support.ringguard@gm
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+All rights reserved. This code is publicly visible for transparency, but is not licensed for reuse, modification, or redistribution without permission.
